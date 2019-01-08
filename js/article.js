@@ -9,8 +9,8 @@ $(document).ready(function(){
 });
 
 function PrintArticles(article){
-    $('.article-title').text(article[0]['title']);
+    $('.module-title').text(article[0]['title']);
     $('.article-author').text(article[0]['author']);
     $('.article-date').text(article[0]['created_at']);
-    $('.article-content').append(article[0]['article']);
+    $('.module-content').append(article[0]['article']);
 }

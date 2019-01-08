@@ -21,18 +21,22 @@ body {
     padding: 0 15px;
 }
 
-.article-container{
+.module-container{
     margin-top: 30px;
     padding: 0px 10px;
     background-color: #DCCFEC;
     border-top: solid #4F517D 5px;
 }
-.article-header{
+.module-header{
 }
-.article-title{
+.module-title{
     border-bottom: solid #4F517D 1px;
     margin-bottom: 0px;
 }
+.module-content{
+    margin: 20px;
+}
+
 .article-author{
     color: #555555;
     display: inline;
@@ -40,7 +44,4 @@ body {
 .article-date{
     color: #555555;
     display: inline;
-}
-.article-content{
-    margin: 20px;
 }
