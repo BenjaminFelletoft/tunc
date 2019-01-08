@@ -1,0 +1,15 @@
+.article-container{
+    padding: 0px 10px;
+}
+.article-header{}
+.article-title{}
+.article-subtitle{}
+.article-author{
+    display: inline;
+}
+.article-date{
+    display: inline;
+}
+.article-content{
+
+}
