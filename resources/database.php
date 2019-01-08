@@ -32,7 +32,7 @@
 			}
 			catch (PDOException $e)
 			{
-				var_dump($e);
+				echo $e->getMessage();
 			}
 		
 		}
