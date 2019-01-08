@@ -12,6 +12,7 @@ $(document).ready(function(){
 });
 
 function PrintArticles(article){
+    console.log(article);
     article = JSON.parse(article);
     console.log(article);
     $('.article-title').html(article['titel']);
