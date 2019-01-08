@@ -4,12 +4,16 @@ $(document).ready(function(){
         data:{action:'GetArticle', id:article_id},
         method:'POST',
         dataType:'json',
-        success:PrintArticles
+        success:PrintArticles,
+        error:function(data){
+            console.log(data);
+        }
     });
 });
 
 function PrintArticles(article){
     article = JSON.parse(article);
+    console.log(article);
     $('.article-title').html(article['titel']);
     $('.article-content').append(article['article']);
     $('.article-date').html(article['created_at']);
