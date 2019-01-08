@@ -10,4 +10,5 @@
         </div>
     </div>
 </body>
+<script src="js/frontpage.js"></script>
 </html>

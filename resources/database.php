@@ -10,6 +10,10 @@
 			$data = Database::insert("INSERT INTO articles (title, author, article) VALUES (?, ?, ?)", array($_POST['title'], $_POST['name'], $_POST['content']));
 			echo json_encode($data);
 		break;
+		case 'GetAllArticle':
+			$data = Database::select("SELECT * FROM articles")
+			echo json_encode($data);
+		break;
 	}
 
 	class Database {
