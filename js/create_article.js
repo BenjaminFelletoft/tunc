@@ -6,7 +6,7 @@ $(document).on('click','#save',function(e) {
            url: "resources/database.php",
            success: function(data){
                 console.log(data);
-                document.location.href = "/article.php?article_id=" + data.replace("\"", "");
+                document.location.href = "/article.php?article_id=" + data.replace("\"", "").replace("\"", "");
            },
            error:function(data){
             console.log(data);
