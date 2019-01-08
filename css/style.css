@@ -1,11 +1,15 @@
+h1 {
+    padding-top: 2%;
+    text-align: center;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+
+  html {
     position: relative;
     min-height: 100%;
   }
   body {
-    /* Margin bottom by footer height */
     margin-bottom: 60px;
   }
   .footer {
@@ -28,3 +32,27 @@ html {
     max-width: 680px;
     padding: 0 15px;
   }
+
+  .article-container{
+    margin-top: 30px;
+    padding: 0px 10px;
+    background-color: #DCCFEC;
+    border-top: solid #4F517D 5px;
+}
+.article-header{
+}
+.article-title{
+    border-bottom: solid #4F517D 1px;
+    margin-bottom: 0px;
+}
+.article-author{
+    color: #555555;
+    display: inline;
+}
+.article-date{
+    color: #555555;
+    display: inline;
+}
+.article-content{
+    margin: 20px;
+}
