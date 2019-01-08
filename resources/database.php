@@ -6,7 +6,7 @@
 			$data = Database::select("SELECT * FROM articles WHERE id = ?", array($_POST['id']));
 			echo json_encode($data);
 		break;
-		case 'InserArticle':
+		case 'CreateArticle':
 			$data = Database::insert("INSERT INTO articles (title, author, article) VALUES (?, ?, ?)", array($_POST['title'], $_POST['name'], $_POST['content']));
 			echo json_encode($data);
 		break;
