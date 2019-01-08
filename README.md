@@ -1,5 +1,5 @@
 <h1 align="center">TUNC</h1>
-Tutorials - User Reviews - News - Community Polls
+<p align="center">Tutorials - User Reviews - News - Community Polls</p>
 
 ***
 
