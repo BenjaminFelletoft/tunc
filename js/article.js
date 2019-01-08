@@ -2,7 +2,7 @@ $(document).ready(function(){
     $.ajax({
         url:'resources/database.php',
         data:{action:'GetArticle', id:article_id},
-        method:'POST',
+        type:'POST',
         dataType:'json',
         success:PrintArticles,
         error:function(data){
