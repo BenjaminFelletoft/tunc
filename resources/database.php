@@ -11,7 +11,7 @@
 			echo json_encode($data);
 		break;
 		case 'GetAllArticle':
-			$data = Database::select("SELECT * FROM articles")
+			$data = Database::select("SELECT * FROM articles");
 			echo json_encode($data);
 		break;
 	}
