@@ -4,19 +4,13 @@ $(document).ready(function(){
         data:{action:'GetArticle', id:article_id},
         method:'POST',
         dataType:'json',
-        success:PrintArticles,
-        error:function(data){
-            console.log(data);
-        }
+        success:PrintArticles
     });
 });
 
 function PrintArticles(article){
-    console.log(article);
-    article = JSON.parse(article);
-    console.log(article);
-    $('.article-title').html(article['titel']);
-    $('.article-content').append(article['article']);
-    $('.article-date').html(article['created_at']);
-    $('.article-author').html(article['author']);
+    $('.article-title').text(article[0]['title']);
+    $('.article-author').text(article[0]['author']);
+    $('.article-date').text(article[0]['created_at']);
+    $('.article-content').append(article[0]['article']);
 }
