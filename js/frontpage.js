@@ -11,16 +11,16 @@ PrintArticleLinks(articles);
 function PrintArticleLinks(articles){
     console.log(articles.articles);
     articles.articles.forEach(article => {
-        
-        $('.module-content').append(`<div class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
+        $('.module-content').append(
+            `<button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
             <h3 class="link-title">`+article['title']+`</h3>
             <p class="link-author">`+article['author']+`</p>
             <p class="link-date">`+article['date']+`</p>
             <div class="link-content panel panel-default">`+article['content']+`</div>
-        </div>`);
-        
-        $(link).click(function(){
+        </button>`);
 
+        $('#'+article["id"]).click(function(){
+            window.location.href = "article.php?article_id="+article["id"];
         });
     });
 }
