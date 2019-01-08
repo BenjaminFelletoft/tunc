@@ -33,7 +33,7 @@
         </nav>
 
         <footer class="footer">
-            <div class="container">
+            <div class="footer-container">
                 <span class="text-muted">Footer infomation really nice ^-^</span>
             </div>
         </footer>
