@@ -9,6 +9,7 @@ $(document).ready(function(){
 });
 
 function PrintArticles(article){
+    console.log(article);
     article = JSON.parse(article);
     $('.article-title').html(article['titel']);
     $('.article-content').append(article['article']);
