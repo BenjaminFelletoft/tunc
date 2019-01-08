@@ -1,15 +1,18 @@
-var text = '{ "articles" : [' +
-'{ "title":"title" , "content":"content", "author":"author" , "date":"date", "id":"1"},' +
-'{ "title":"title2" , "content":"content2", "author":"author2" , "date":"date2", "id":"2"},' +
-'{ "title":"title4" , "content":"content4", "author":"author4" , "date":"date4", "id":"3"},' +
-'{ "title":"title3" , "content":"content3", "author":"author3" , "date":"date3", "id":"4"} ]}';
-
-var articles = JSON.parse(text);
-
-PrintArticleLinks(articles);
+$(document).ready(function(){
+    $.ajax({
+        url:'resources/database.php',
+        data:{action:'GetAllArticles'},
+        type:'POST',
+        dataType:'html',
+        success:PrintArticleLinks,
+        error: function (data) {
+            console.log(data);
+        },
+    });
+});
 
 function PrintArticleLinks(articles){
-    console.log(articles.articles);
+    console.log(articles);
     articles.articles.forEach(article => {
         $('.module-content').append(
             `<button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
