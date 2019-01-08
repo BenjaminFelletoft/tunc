@@ -7,12 +7,11 @@
     <body>
         <div class="article-container col-lg-8 col-lg-offset-2">
             <div class="article-header">
-                <h1 class="article-title">Title</h1>
-                <p class="article-author">author</p>
-                <p class="article-date">date</p>
+                <h1 class="article-title"></h1>
+                <p class="article-author"></p>
+                <p class="article-date"></p>
             </div>
             <div class="article-content">
-                Content
             </div>
         </div>
     </body>
