@@ -6,6 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/article.js"></script>
+    <script>
+        var article_id = "<?php echo $_GET["article_id"]; ?>";
+        alert(article_id);
+    </script>
 </head>
 <body>
     <div class="article-container col-lg-8 col-lg-offset-2">
