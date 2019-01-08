@@ -1,3 +1,6 @@
+/*
+    general layout
+*/
 html {
     position: relative;
     min-height: 100%;
@@ -21,9 +24,13 @@ body {
     padding: 0 15px;
 }
 
+
+/*
+    module
+*/
 .module-container{
     margin-top: 30px;
-    padding: 0px 10px;
+    padding: 10px;
     background-color: #DCCFEC;
     border-top: solid #4F517D 5px;
 }
@@ -32,11 +39,16 @@ body {
 .module-title{
     border-bottom: solid #4F517D 1px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 .module-content{
     margin: 20px;
 }
 
+
+/*
+    article
+*/
 .article-author{
     color: #555555;
     display: inline;
@@ -44,4 +56,29 @@ body {
 .article-date{
     color: #555555;
     display: inline;
+}
+
+
+/*
+    frontpage
+*/
+.link-container{
+    border: solid #4F517D 1px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.link-title{
+    margin: 0px;
+    display: inline;
+}
+.link-content{
+    margin-bottom: 0px;
+}
+.link-author{
+    display: inline;
+    color: #555555;
+}
+.link-date{
+    display: inline;
+    color: #555555;
 }
