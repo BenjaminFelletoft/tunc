@@ -8,7 +8,6 @@
     <script src="js/article.js"></script>
     <script>
         var article_id = "<?php echo $_GET["article_id"]; ?>";
-        alert(article_id);
     </script>
 </head>
 <body>
