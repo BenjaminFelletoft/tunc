@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <script>
-        var article_id = "<?php echo $_GET["article_id"]; ?>";
+        var article_id = "<?php echo $_GET['article_id']; ?>";
     </script>
     <?php require('layout.php') ?>
     <body>
