@@ -4,7 +4,10 @@ $(document).ready(function(){
         data:{action:'GetArticle', id:article_id},
         method:'POST',
         dataType:'json',
-        success:PrintArticles
+        success:PrintArticles,
+        error:function(data){
+            console.log(data);
+        }
     });
 });
 
