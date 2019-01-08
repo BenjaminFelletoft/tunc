@@ -16,4 +16,5 @@
             </div>
         </div>
     </body>
+    <script src="js/article.js"></script>
 </html>
