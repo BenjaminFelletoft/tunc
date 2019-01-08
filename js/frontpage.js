@@ -3,7 +3,7 @@ $(document).ready(function(){
         url:'resources/database.php',
         data:{action:'GetAllArticles'},
         type:'POST',
-        dataType:'html',
+        dataType:'json',
         success:PrintArticleLinks,
         error: function (data) {
             console.log(data);
@@ -13,13 +13,13 @@ $(document).ready(function(){
 
 function PrintArticleLinks(articles){
     console.log(articles);
-    articles.articles.forEach(article => {
+    articles.forEach(article => {
         $('.module-content').append(
             `<button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
             <h3 class="link-title">`+article['title']+`</h3>
             <p class="link-author">`+article['author']+`</p>
-            <p class="link-date">`+article['date']+`</p>
-            <div class="link-content panel panel-default">`+article['content']+`</div>
+            <p class="link-date">`+article['created_at']+`</p>
+            <div class="link-content panel panel-default">`+article['article']+`</div>
         </button>`);
 
         $('#'+article["id"]).click(function(){
