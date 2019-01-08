@@ -11,10 +11,8 @@
     <div class="article-container col-lg-8 col-lg-offset-2">
         <div class="article-header">
             <h1 class="article-title">Title</h1>
-            <div class="panel panel-default article-subtitle">
-                <p class="author" style="display: inline">author</p>
-                <p class="date" style="display: inline">date</p>
-            </div>
+            <p class="article-author">author</p>
+            <p class="article-date">date</p>
         </div>
         <div class="article-content">
             Content
