@@ -16,7 +16,7 @@
 			try 
 			{
 				//Database informationer skal ændres
-				$this->connection = new PDO('mysql:host=localhost;dbname=connyinstrukdb;', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
+				$this->connection = new PDO('mysql:host=192.168.160.106;dbname=tunc;', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
 				//--------------------------------------------------------------------------------------------------------------
 				$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$this->connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false );
