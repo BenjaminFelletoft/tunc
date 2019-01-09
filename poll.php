@@ -5,7 +5,7 @@
     </script>
     <?php require('layout.php') ?>
     <body>
-        <div class="module-container col-lg-8 col-lg-offset-2">
+        <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
             <div class="module-header">
                 <h1 class="module-title"></h1>
                 <p class="poll-author"></p>

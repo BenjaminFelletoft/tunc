@@ -10,6 +10,10 @@ body {
     margin-bottom: 60px;
 }
 
+li {
+    list-style-type: none;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -113,9 +117,15 @@ body {
     color: #555555;
 }
 .search {
-    float: right;
-    padding: 3px;
     border: none;
-    margin-right: 16px;
-    font-size: 17px;
+    font-size: 1.2em;
+    margin: 2%;
+    width: 96%;
+}
+
+/*
+    Poll 
+*/
+.option {
+    width: 92.9%;
 }

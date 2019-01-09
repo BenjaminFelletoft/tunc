@@ -1,10 +1,20 @@
+var optionCounter = 0;
+
 $(document).on('click','#add-option',function(e) {
-    $('#options').append(`
+    optionCounter += 1;
+
+    var optionContainer = $("<div></div>")
+        .append($("<label></label").attr("for", "option-" + optionCounter).text("Option " + optionCounter).css("display", "block"))
+        .append($("<input>").attr("id", "option-" + optionCounter).addClass("option form-control").css("display", "inline"))
+        .append($("<button></button>").addClass("delete-option btn btn-primary").css("display", "inline").text("Delete"));
+
+    $("#options").append(optionContainer);
+    /* $('#options').append(`
         <div>
-            <input class="option" style="display: inline">
-            <button class="delete-option" style="display: inline">Delete</button>
+            <input class="option form-control" style="display: inline">
+            <button class="delete-option btn btn-primary" style="display: inline">Delete</button>
         </div>
-    `);
+    `); */
 });
 
 $(document).on('click','.delete-option',function(e) {
