@@ -14,13 +14,14 @@ $(document).ready(function(){
 function PrintArticleLinks(articles){
     var articleCount = articles.length;
     articles.forEach(article => {
-        var articleContainer = $("<div></div>").addClass("col-lg-8 article").attr("id", article["id"])
+        var articleContainer = $("<li></li>").append(
+            $("<div></div>").addClass("col-lg-8 article").attr("id", article["id"])
             .append($("<h3></h3>").text(article["title"]))
             .append($("<p></p>").addClass("lead").text("by " + article["author"]))
             .append($("<hr>"))
             .append($("<p></p>").text("Posted on " + article["created_at"]))
             .append($("<hr>"))
-            .append($("<div></div>").addClass("link-content").html(article["article"]));
+            .append($("<div></div>").addClass("link-content").html(article["article"])));
         
         $(".module-content").append(articleContainer);
 

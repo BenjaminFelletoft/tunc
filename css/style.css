@@ -40,11 +40,13 @@ body {
     margin-bottom: 7%;
 }
 .module-header{
+    border-bottom: solid #4F517D 1px;
 }
 .module-title{
-    border-bottom: solid #4F517D 1px;
+    /*border-bottom: solid #4F517D 1px;*/
     margin-bottom: 0px;
     margin-top: 0px;
+    display: inline;
 }
 .module-content{
     padding: 20px;
@@ -102,4 +104,11 @@ body {
 .link-date{
     display: inline;
     color: #555555;
+}
+.search {
+    float: right;
+    padding: 3px;
+    border: none;
+    margin-right: 16px;
+    font-size: 17px;
 }
