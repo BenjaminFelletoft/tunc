@@ -44,11 +44,15 @@ function PrintPoll(poll){
     });
     $('.progress').click(function(){
         var option_id = $(this).attr("id");
+
+
         $.ajax({
             url:'resources/database.php',
             data:{action:'PollVote', id:option_id},
             type:'POST',
             success:function(){
+                
+
                 location.reload(true);
             },
             error:function(data){
@@ -56,4 +60,8 @@ function PrintPoll(poll){
             }
         });
     });
+}
+
+function votingcookie(){
+    
 }
