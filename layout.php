@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="create_article.php">Create Article</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create_poll.php">Create Poll</a>
+                    </li>
                 </ul>
             </div>
         </nav>
