@@ -21,6 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="content" class="h4">Content</label>
+                <a class="btn btn-default btn-xs" onclick="insertText()"><i class="fas fa-plus-square"></i></a>
                 <textarea id="content" name="content" class="form-control"></textarea>
             </div>
             <button id="save" class="btn btn-primary">Save</button>
@@ -28,4 +29,5 @@
     </div>
 </body>
 <script src="js/create_article.js"></script>
+<script src="js/insert.js"></script>
 </html>

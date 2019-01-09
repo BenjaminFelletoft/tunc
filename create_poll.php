@@ -21,6 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="description" class="h4">Description</label>
+                <a class="btn btn-default btn-xs" onclick="insertText()"><i class="fas fa-plus-square"></i></a>
                 <textarea id="description" name="description" class="form-control"></textarea>
             </div>
             <div class="form-group" id="options">
@@ -34,4 +35,5 @@
     </div>
 </body>
 <script src="js/create_poll.js"></script>
+<script src="js/insert.js"></script>
 </html>

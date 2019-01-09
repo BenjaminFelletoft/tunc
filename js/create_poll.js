@@ -7,14 +7,8 @@ $(document).on('click','#add-option',function(e) {
         .append($("<label></label").attr("for", "option-" + optionCounter).text("Option " + optionCounter).css("display", "block"))
         .append($("<input>").attr("id", "option-" + optionCounter).addClass("option form-control").css("display", "inline"))
         .append($("<button></button>").addClass("delete-option btn btn-primary btn-block").css("display", "inline").text("Delete"));
-
-    $("#options").append(optionContainer);
-    /* $('#options').append(`
-        <div>
-            <input class="option form-control" style="display: inline">
-            <button class="delete-option btn btn-primary" style="display: inline">Delete</button>
-        </div>
-    `); */
+    
+        $("#options").append(optionContainer);
 });
 
 $(document).on('click','.delete-option',function(e) {

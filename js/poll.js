@@ -1,3 +1,8 @@
+$('#edit-poll').click(function(){
+    console.log('test');
+    location.href='edit_poll.php?poll_id='+poll_id;
+});
+
 $(document).ready(function(){
     $.ajax({
         url:'resources/database.php',
@@ -11,7 +16,9 @@ $(document).ready(function(){
     });
 });
 
+
 function PrintPoll(poll){
+    console.log(poll);
     $('.module-title').text(poll[0]['title']);
     $('.poll-author').text(poll[0]['author']);
     $('.poll-date').text(poll[0]['created_at']);
