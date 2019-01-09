@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 
 function PrintPoll(poll){
+    console.log(poll);
     $('.module-title').text(poll[0]['title']);
     $('.poll-author').text(poll[0]['author']);
     $('.poll-date').text(poll[0]['created_at']);
