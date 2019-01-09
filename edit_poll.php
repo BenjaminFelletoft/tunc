@@ -6,6 +6,9 @@
     <title>Create Poll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script>
+        var poll_id = "<?php echo $_GET['poll_id']; ?>";
+    </script>
 </head>
 <?php require('layout.php') ?>
 <body>
@@ -16,12 +19,12 @@
                 <input type="text" id="title" class="form-control">
             </div>
             <div class="form-group">
-                <label for="author" class="h4">Author</label>
+                <label for="name" class="h4">Author</label>
                 <input type="text" id="author" class="form-control">
             </div>
             <div class="form-group">
-                <label for="description" class="h4">Description</label>
-                <textarea id="description" name="description" class="form-control"></textarea>
+                <label for="description" class="h4">Content</label>
+                <textarea id="description" name="content" class="form-control"></textarea>
             </div>
             <div class="form-group" id="options">
 
@@ -33,5 +36,5 @@
         </div>
     </div>
 </body>
-<script src="js/create_poll.js"></script>
+<script src="js/edit_poll.js"></script>
 </html>
