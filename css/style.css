@@ -4,7 +4,7 @@
 html {
     position: relative;
     min-height: 100%;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnM-R1VfneMYDYlYxE3hvqAa3Bv0Y7_jEHVig6_KTZjvKqcbKTUA);
+    background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/wood-textures-high-quality-1.jpg);
 }
 body {
     margin-bottom: 60px;
@@ -36,14 +36,23 @@ body {
     margin-bottom: 7%;
 }
 .module-header{
+    position: relative;
+}
+.module-header > a {
+    position: absolute;
+    top: 1%;
+    right: 1%;
 }
 .module-title{
     border-bottom: solid #4F517D 1px;
-    margin-bottom: 0px;
+    margin-bottom: 1%;
     margin-top: 0px;
 }
 .module-content{
     padding: 20px;
+    margin-top: 1%;
+}
+.module-content:not(.container) {
     background-color: white;
 }
 
@@ -54,10 +63,12 @@ body {
 .article-author{
     color: #555555;
     display: inline;
+    margin: 2% 0 2% 0;
 }
 .article-date{
     color: #555555;
     display: inline;
+    margin: 2% 0 2% 0;
 }
 .article {
     background-color: #fff;

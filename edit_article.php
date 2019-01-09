@@ -12,12 +12,21 @@
 </script>
 <?php require('layout.php') ?>
 <body>
-    <div class="module-container col-lg-8 col-lg-offset-2">
+    <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
         <div class="module-header">
-            <p>Title</p><input id="title" type="text">
-            <p>Name</p><input id="name" type="text">
-            <p>Content</p><textarea id="content" name="content"></textarea>
-            <button id="save">Save Changes</button>
+            <div class="form-group">
+                <label for="title" class="h4">Title</label>
+                <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="name" class="h4">Author</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="content" class="h4">Content</label>
+                <textarea id="content" name="content" class="form-control"></textarea>
+            </div>
+            <button id="save" class="btn btn-primary">Save</button>
         </div>
     </div>
 </body>
