@@ -1,4 +1,10 @@
+$('.edit-poll').click(function(){
+    console.log('test');
+    location.href='edit_poll.php?poll_id='+poll_id;
+});
+
 $(document).ready(function(){
+
     $.ajax({
         url:'resources/database.php',
         data:{action:'GetPoll', id:poll_id},
@@ -10,6 +16,7 @@ $(document).ready(function(){
         }
     });
 });
+
 
 function PrintPoll(poll){
     $('.module-title').text(poll[0]['title']);
