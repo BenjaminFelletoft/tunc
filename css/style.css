@@ -5,6 +5,10 @@ html {
     position: relative;
     min-height: 100%;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnM-R1VfneMYDYlYxE3hvqAa3Bv0Y7_jEHVig6_KTZjvKqcbKTUA);
+    background-image: url('https://media1.giphy.com/media/5T06fayphNrPayKYak/giphy.gif?cid=3640f6095c35cd6d486b78762e27ff24');
+    background-size: cover;
+    background-size:100%;
+    background-attachment: fixed;
 }
 body {
     margin-bottom: 60px;
