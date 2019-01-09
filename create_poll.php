@@ -3,13 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Edit Article</title>
+    <title>Create Poll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
-<script>
-    var article_id = "<?php echo $_GET['article_id']; ?>";
-</script>
 <?php require('layout.php') ?>
 <body>
     <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
@@ -26,9 +23,15 @@
                 <label for="content" class="h4">Content</label>
                 <textarea id="content" name="content" class="form-control"></textarea>
             </div>
-            <button id="save" class="btn btn-primary">Save</button>
+            <div class="form-group" id="options">
+
+            </div>
+            <div class="form-group">
+                <button id="add-option" class="btn btn-primary">Add Option</button>
+                <button id="save" class="btn btn-primary">Save</button>
+            </div>
         </div>
     </div>
 </body>
-<script src="js/edit_article.js"></script>
+<script src="js/create_poll.js"></script>
 </html>

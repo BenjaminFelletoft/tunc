@@ -8,9 +8,9 @@
         <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
             <div class="module-header">
                 <h1 class="module-title"></h1>
+                <a href="" id="edit" class="btn btn-primary">Edit</a>
                 <p class="article-author"></p>
                 <p class="article-date"></p>
-                <a href="" id="edit"><button>Edit</button></a>
             </div>
             <div class="module-content">
             </div>

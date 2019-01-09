@@ -10,6 +10,22 @@ $(document).ready(function(){
         },
     });
 });
+function searchArticles() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("articleList");
+    li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+      h3 = li[i].getElementsByTagName("h3")[0];
+      txtValue = h3.textContent || h3.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
 
 function PrintArticleLinks(articles){
     var articleCount = articles.length;
@@ -28,13 +44,6 @@ function PrintArticleLinks(articles){
         if (articles.indexOf(article) + 1 !== articleCount) {
             $("module-content").append($("<hr>"));
         }
-        /* $('.module-content').append(
-            `<button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
-            <h3 class="link-title">`+article['title']+`</h3>
-            <p class="link-author">`+article['author']+`</p>
-            <p class="link-date">`+article['created_at']+`</p>
-            <div class="link-content panel panel-default">`+article['article']+`</div>
-        </button>`); */
 
         $('#'+article["id"]).click(function(){
             window.location.href = "article.php?article_id="+article["id"];
