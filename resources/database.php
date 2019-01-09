@@ -14,6 +14,10 @@
 			$data = Database::select("SELECT * FROM articles", array());
 			echo json_encode($data);
 		break;
+		case 'PollVote':
+			$params = array($_POST['id']);
+			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", $params);
+		break;
 	}
 
 	class Database {
