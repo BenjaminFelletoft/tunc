@@ -16,7 +16,6 @@ $(document).ready(function(){
     });
 });
 
-
 function PrintPoll(poll){
     console.log(poll);
     $('.module-title').text(poll[0]['title']);
@@ -45,23 +44,20 @@ function PrintPoll(poll){
     $('.progress').click(function(){
         var option_id = $(this).attr("id");
 
+        if(!decodeURIComponent(document.cookie).includes("poll="+poll_id)){
+            $.ajax({
+                url:'resources/database.php',
+                data:{action:'PollVote', id:option_id},
+                type:'POST',
+                success:function(){
+                    document.cookie = "poll="+poll_id;
 
-        $.ajax({
-            url:'resources/database.php',
-            data:{action:'PollVote', id:option_id},
-            type:'POST',
-            success:function(){
-                
-
-                location.reload(true);
-            },
-            error:function(data){
-                console.log(data);
-            }
-        });
+                    location.reload(true);
+                },
+                error:function(data){
+                    console.log(data);
+                }
+            });
+        }
     });
-}
-
-function votingcookie(){
-    
 }
