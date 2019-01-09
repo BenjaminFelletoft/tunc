@@ -9,6 +9,8 @@ $(document).ready(function(){
             console.log(data);
         }
     });
+
+    $('#edit').attr('href', 'edit_article.php?article_id=' + article_id);
 });
 
 function PrintArticles(article){
