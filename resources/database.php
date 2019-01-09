@@ -17,11 +17,11 @@
 			echo json_encode($data);
 			break;
 		case 'CreatePoll':
-			/*$data = Database::insert("INSERT INTO poll (title, author, description) VALUES (?, ?, ?)", array($_POST['title'], $_POST['name'], $_POST['description']));
+			$data = Database::insert("INSERT INTO poll (title, author, description) VALUES (?, ?, ?)", array($_POST['title'], $_POST['author'], $_POST['description']));
 			foreach ($_POST['options'] as $option) {
-				Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($option[]));
+				Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($data, $option));
 			}
-			echo json_encode($data);*/
+			echo json_encode($data);
 		break;
 		case 'GetAllArticles':
 			$data = Database::select("SELECT * FROM articles", array());

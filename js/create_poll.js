@@ -22,13 +22,12 @@ $(document).on('click','.delete-option',function(e) {
 });
 
 $(document).on('click','#save',function(e) {
-    var options = array();
-    $('#options').children.forEach(option => {
-        options.push($(this).children('.option').val());
+    var options = [];
+    $('input.option').each(function(index, option) {
+        options.push($(option).val());
     });
-    console.log(options);
     $.ajax({
-        data: {action:'CreatePoll', title:$('#title').val(), name:$('#name').val(), description:$('#description').val(), options},
+        data: {action:'CreatePoll', title:$('#title').val(), author:$('#author').val(), description:$('#description').val(), options},
         type: "POST",
         url: "resources/database.php",
         success: function(data){
