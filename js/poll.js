@@ -28,7 +28,7 @@ function PrintPoll(poll){
             `<div class="progress" id="`+option["id"]+`">
                 <div class="progress-bar" 
                 role="progressbar" 
-                style="width: `+percent+`%; text-align: left; padding-left:5px" 
+                style="width: `+percent+`%;" 
                 aria-valuenow="`+option["votes"]+`" 
                 aria-valuemin="0" 
                 aria-valuemax="`+allVotes+`">`+option["name"]+` - `+option["votes"]+`</div>
