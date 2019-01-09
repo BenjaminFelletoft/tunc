@@ -32,4 +32,5 @@
     </div>
 </body>
 <script src="js/edit_article.js"></script>
+<script src="js/insert.js"></script>
 </html>

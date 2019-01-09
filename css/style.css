@@ -58,6 +58,12 @@ li {
     padding: 20px;
     margin-top: 1%;
 }
+
+.module-content > img, .link-content > img {
+    max-width: 100%;
+}
+
+
 .module-content:not(.container) {
     background-color: white;
     list-style-type: none;
