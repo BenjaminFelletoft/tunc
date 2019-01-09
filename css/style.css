@@ -107,6 +107,7 @@ li {
 }
 .link-content{
     margin-bottom: 0px;
+    white-space: pre-wrap;
 }
 .link-author{
     display: inline;

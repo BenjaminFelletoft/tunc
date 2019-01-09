@@ -18,7 +18,16 @@ $(document).on('click','#add-option',function(e) {
 });
 
 $(document).on('click','.delete-option',function(e) {
+    optionCounter -= 1;
     $(this).parent().remove();
+
+    // Count the existing options again
+    var tempCounter = 0;
+    $("input.option").each(function(index, input) {
+        tempCounter += 1;
+        $(input).attr("id", "option-" + tempCounter);
+        $(input).siblings("label").attr("for", "option-" + tempCounter).text("Option " + tempCounter);
+    });
 });
 
 $(document).on('click','#save',function(e) {
