@@ -18,6 +18,10 @@
 			$data = Database::update("UPDATE articles SET title=?, author=?, article=? WHERE id=?", array($_POST['title'], $_POST['name'], $_POST['content'], $_POST['id']));
 			echo json_encode($data);
 		break;
+		case 'PollVote':
+			$params = array($_POST['id']);
+			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", $params);
+		break;
 	}
 
 	class Database {
