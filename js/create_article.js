@@ -1,5 +1,4 @@
 $(document).on('click','#save',function(e) {
-    var data = $("#form-search").serialize();
     $.ajax({
            data: {action:'CreateArticle', title:$('#title').val(), name:$('#name').val(), content:$('#content').val()},
            type: "POST",
