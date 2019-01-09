@@ -8,7 +8,6 @@
             <input class="search form-control" id="searchInput" onkeyup="searchArticles()" type="text" placeholder="Search..">
         </div>
         <ul id="articleList" class="module-content container">
-            <div class="row"></div> 
         </ul>
     </div>
 </body>
