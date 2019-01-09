@@ -15,7 +15,7 @@ function PrintArticleLinks(articles){
     console.log(articles);
     articles.forEach(article => {
         $('.module-content').append(
-            `<button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
+            `<li><button class="link-container col-lg-10 col-lg-offset-1" id="`+article["id"]+`">
             <h3 class="link-title">`+article['title']+`</h3>
             <p class="link-author">`+article['author']+`</p>
             <p class="link-date">`+article['created_at']+`</p>
