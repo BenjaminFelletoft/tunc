@@ -63,6 +63,7 @@ li {
 .module-content{
     padding: 20px;
     margin-top: 1%;
+    white-space: pre-wrap;
 }
 
 .module-content > img, .link-content > img {
