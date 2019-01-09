@@ -17,11 +17,11 @@
 			echo json_encode($data);
 			break;
 		case 'CreatePoll':
-			/*$data = Database::insert("INSERT INTO poll (title, author, description) VALUES (?, ?, ?)", array($_POST['title'], $_POST['name'], $_POST['description']));
+			$data = Database::insert("INSERT INTO poll (title, author, description) VALUES (?, ?, ?)", array($_POST['title'], $_POST['author'], $_POST['description']));
 			foreach ($_POST['options'] as $option) {
-				Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($option[]));
+				Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($data, $option));
 			}
-			echo json_encode($data);*/
+			echo json_encode($data);
 		break;
 		case 'GetAllArticles':
 			$data = Database::select("SELECT * FROM articles", array());
@@ -30,6 +30,17 @@
 		case 'EditArticle':
 			$data = Database::update("UPDATE articles SET title=?, author=?, article=? WHERE id=?", array($_POST['title'], $_POST['name'], $_POST['content'], $_POST['id']));
 			echo json_encode($data);
+		break;
+		case 'EditPoll':
+			$data = Database::update("UPDATE poll SET title=?, author=?, description=? WHERE id=?", array($_POST['title'], $_POST['author'], $_POST['description'], $_POST['id']));
+			foreach ($_POST['options'] as $option) {
+				if(strpos($option[0], 'option') !== false){
+					$data = Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($_POST["id"], $option[1]));
+				}
+				else{
+					$data = Database::update("UPDATE polloptions SET name = ? WHERE id = ?", array($option[1], $option[0]));
+				}
+			}
 		break;
 		case 'PollVote':
 			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));

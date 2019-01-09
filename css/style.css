@@ -9,6 +9,7 @@ html {
 }
 body {
     margin-bottom: 60px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnM-R1VfneMYDYlYxE3hvqAa3Bv0Y7_jEHVig6_KTZjvKqcbKTUA);
 }
 
 li {
@@ -35,10 +36,15 @@ li {
     module
 */
 .module-container{
-    margin-top: 30px;
     padding: 10px;
     border-top: solid #4F517D 5px;
+    margin-top: 30px;
     margin-bottom: 7%;
+}
+@media (max-width: 1199.98px) {
+    .module-container {
+        margin: 30px auto 7% auto;
+    }
 }
 .module-header{
     position: relative;
@@ -57,7 +63,14 @@ li {
 .module-content{
     padding: 20px;
     margin-top: 1%;
+    white-space: pre-wrap;
 }
+
+.module-content > img, .link-content > img {
+    max-width: 100%;
+}
+
+
 .module-content:not(.container) {
     background-color: white;
     list-style-type: none;
@@ -108,6 +121,7 @@ li {
 }
 .link-content{
     margin-bottom: 0px;
+    white-space: pre-wrap;
 }
 .link-author{
     display: inline;
@@ -128,5 +142,25 @@ li {
     Poll 
 */
 .option {
-    width: 92.9%;
+    width: 91%;
+    margin-right: 2%;
+}
+
+.delete-option {
+    max-width: 6.7%;
+}
+
+#options {
+    margin-top: 25px;
+}
+
+#options > div > label {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    text-align: left;
+    padding-left: 5px;
+    color: black;
+    background-color: #4b9ee5;
 }
