@@ -22,8 +22,13 @@ $(document).on('click','.delete-option',function(e) {
 });
 
 $(document).on('click','#save',function(e) {
+    var options = array();
+    $('#options').children.forEach(option => {
+        options.push($(this).children('.option').val());
+    });
+    console.log(options);
     $.ajax({
-        data: {action:'CreatePoll', title:$('#title').val(), name:$('#name').val(), content:$('#content').val()},
+        data: {action:'CreatePoll', title:$('#title').val(), name:$('#name').val(), description:$('#description').val(), options},
         type: "POST",
         url: "resources/database.php",
         success: function(data){
