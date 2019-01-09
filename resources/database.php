@@ -25,8 +25,7 @@
 			echo json_encode($data);
 		break;
 		case 'PollVote':
-			$params = array($_POST['id']);
-			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", $params);
+			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));
 		break;
 	}
 

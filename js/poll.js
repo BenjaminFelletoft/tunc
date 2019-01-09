@@ -12,7 +12,6 @@ $(document).ready(function(){
 });
 
 function PrintPoll(poll){
-    console.log(poll);
     $('.module-title').text(poll[0]['title']);
     $('.poll-author').text(poll[0]['author']);
     $('.poll-date').text(poll[0]['created_at']);
@@ -35,17 +34,19 @@ function PrintPoll(poll){
                 aria-valuemax="`+allVotes+`">`+option["name"]+` - `+option["votes"]+`</div>
             </div>`
         );
-        $('.progress').click(function(){
-            $.ajax({
-                url:'resources/database.php',
-                data:{action:'PollVote', id:$(this).val("id")},
-                type:'POST',
-                dataType:'json',
-                success:function(){location.reload();},
-                error:function(data){
-                    console.log(data);
-                }
-            });
+    });
+    $('.progress').click(function(){
+        var option_id = $(this).attr("id");
+        $.ajax({
+            url:'resources/database.php',
+            data:{action:'PollVote', id:option_id},
+            type:'POST',
+            success:function(){
+                location.reload(true);
+            },
+            error:function(data){
+                console.log(data);
+            }
         });
     });
 }
