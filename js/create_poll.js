@@ -6,7 +6,7 @@ $(document).on('click','#add-option',function(e) {
     var optionContainer = $("<div></div>")
         .append($("<label></label").attr("for", "option-" + optionCounter).text("Option " + optionCounter).css("display", "block"))
         .append($("<input>").attr("id", "option-" + optionCounter).addClass("option form-control").css("display", "inline"))
-        .append($("<button></button>").addClass("delete-option btn btn-primary").css("display", "inline").text("Delete"));
+        .append($("<button></button>").addClass("delete-option btn btn-primary btn-block").css("display", "inline").text("Delete"));
     
         $("#options").append(optionContainer);
 });

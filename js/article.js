@@ -17,5 +17,5 @@ function PrintArticles(article){
     $('.module-title').text(article[0]['title']);
     $('.article-author').text(article[0]['author']);
     $('.article-date').text(article[0]['created_at']);
-    $('.module-content').append(article[0]['article']);
+    $('.module-content').html(article[0]['article']);
 }
