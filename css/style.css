@@ -4,6 +4,7 @@
 html {
     position: relative;
     min-height: 100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnM-R1VfneMYDYlYxE3hvqAa3Bv0Y7_jEHVig6_KTZjvKqcbKTUA);
 }
 body {
     margin-bottom: 60px;
@@ -31,8 +32,8 @@ body {
 .module-container{
     margin-top: 30px;
     padding: 10px;
-    background-color: #DCCFEC;
     border-top: solid #4F517D 5px;
+    margin-bottom: 7%;
 }
 .module-header{
     border-bottom: solid #4F517D 1px;
@@ -44,7 +45,8 @@ body {
     display: inline;
 }
 .module-content{
-    margin: 20px;
+    padding: 20px;
+    background-color: white;
 }
 
 
@@ -58,6 +60,20 @@ body {
 .article-date{
     color: #555555;
     display: inline;
+}
+.article {
+    background-color: #fff;
+    padding-bottom: 2%;
+    max-width: 100%;
+    width: 94%;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.article > h3 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+    font-weight: 600;
 }
 
 

@@ -6,6 +6,12 @@
 			$data = Database::select("SELECT * FROM articles WHERE id = ?", array($_POST['id']));
 			echo json_encode($data);
 		break;
+		case 'GetPoll':
+			$data = Database::select("SELECT * FROM poll 
+			LEFT JOIN polloptions ON poll.id = polloptions.poll_id 
+			WHERE poll.id = ?", array($_POST['id']));
+			echo json_encode($data);
+		break;
 		case 'CreateArticle':
 			$data = Database::insert("INSERT INTO articles (title, author, article) VALUES (?, ?, ?)", array($_POST['title'], $_POST['name'], $_POST['content']));
 			echo json_encode($data);
@@ -19,8 +25,7 @@
 			echo json_encode($data);
 		break;
 		case 'PollVote':
-			$params = array($_POST['id']);
-			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", $params);
+			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));
 		break;
 	}
 
