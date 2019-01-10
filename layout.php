@@ -35,7 +35,7 @@
 
         <footer class="footer">
             <div class="footer-container">
-                <span class="text-muted">Footer infomation really nice ^-^</span>
+                <span class="text-muted">Not Copyrighted TUNC 2019-2019.</span>
             </div>
         </footer>
     </body>
