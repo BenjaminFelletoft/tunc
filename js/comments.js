@@ -23,6 +23,15 @@ function PrintComments(comments){
         $('.comment-content').text(poll[0]['comment']);
         $('.comment-date').text(poll[0]['created_at']);*/
     });
+    $('.comments-content').append(
+        `<div class="comment">
+            <label for="author" class="h4" style="float:left">Author</label>
+            <input type="text" id="author" class="form-control" style="max-width:30%">
+            <label for="comment-content" class="h4" style="float:left">Your Comment</label>
+            <textarea class="form-control" id="comment-content" rows="7"></textarea>
+            <button id="save-comment" type="button" class="btn btn-success" style="float:left">Comment</button>
+        </div>`
+    );
 }
 
 $('#save-comment').click(function(){
