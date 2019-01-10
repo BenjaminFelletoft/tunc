@@ -178,14 +178,14 @@ function sortArticlesByAuthor(){
       article1 = b[i].getElementsByTagName("p")
       article2 = b[i + 1].getElementsByTagName("p")
       if (dir == "asc") {
-        if (article1[0].innerHTML.toLowerCase() > article2[0].innerHTML.toLowerCase()) {
+        if (article1[1].innerHTML.toLowerCase() > article2[1].innerHTML.toLowerCase()) {
           /* If next item is alphabetically lower than current item,
           mark as a switch and break the loop: */
           shouldSwitch = true;
           break;
         }
       } else if (dir == "desc") {
-        if (article1[0].innerHTML.toLowerCase() < article2[0].innerHTML.toLowerCase()) {
+        if (article1[1].innerHTML.toLowerCase() < article2[1].innerHTML.toLowerCase()) {
           /* If next item is alphabetically higher than current item,
           mark as a switch and break the loop: */
           shouldSwitch= true;
@@ -230,14 +230,14 @@ function sortArticlesByPosted(){
       article1 = b[i].getElementsByTagName("p")
       article2 = b[i + 1].getElementsByTagName("p")
       if (dir == "asc") {
-        if (article1[1].innerHTML.toLowerCase() > article2[1].innerHTML.toLowerCase()) {
+        if (article1[2].innerHTML.toLowerCase() > article2[2].innerHTML.toLowerCase()) {
           /* If next item is alphabetically lower than current item,
           mark as a switch and break the loop: */
           shouldSwitch = true;
           break;
         }
       } else if (dir == "desc") {
-        if (article1[1].innerHTML.toLowerCase() < article2[1].innerHTML.toLowerCase()) {
+        if (article1[2].innerHTML.toLowerCase() < article2[2].innerHTML.toLowerCase()) {
           /* If next item is alphabetically higher than current item,
           mark as a switch and break the loop: */
           shouldSwitch= true;
