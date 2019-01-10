@@ -225,4 +225,32 @@ li {
     border-bottom: solid #4F517D 1px;
     margin-bottom: 1%;
     margin-top: 0px;
+    /* display: inline; */
+}
+
+.comment-content {
+    padding: 20px;
+    margin-top: 1%;
+}
+
+.comment-content>img,
+.link-content>img {
+    max-width: 100%;
+}
+
+.comment-content:not(.container) {
+    background-color: white;
+    list-style-type: none;
+}
+
+.comment-author {
+    color: #555555;
+    display: inline;
+    margin: 2% 0 2% 0;
+}
+
+.comment-date {
+    color: #555555;
+    display: inline;
+    margin: 2% 0 2% 0;
 }
