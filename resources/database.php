@@ -48,6 +48,9 @@
 		case 'GetComments':
 			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] : $article_id = null;
 			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']: $poll_id = null;
+			echo $article_id;
+			echo $poll_id;	
+			$data = null;
 			if(isset($article_id)){
 				$data = Database::select("SELECT * FROM comments WHERE article_id = ?", array($article_id));
 			}else if(isset($poll_id)){
