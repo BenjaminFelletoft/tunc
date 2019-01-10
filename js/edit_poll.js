@@ -76,3 +76,18 @@ $(document).ready(function(){
         }
     });
 });
+
+$(document).on('click', '#delete', function(e) {
+    $.ajax({
+            data: {action:'DeletePoll', id:poll_id},
+            type: "POST",
+            url: "resources/database.php",
+            success: function(data){
+                console.log(data);
+                document.location.href = "frontpage.php";
+            },
+            error:function(data){
+            console.log(data);
+        }
+    });
+})
