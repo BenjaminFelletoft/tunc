@@ -168,6 +168,10 @@ li {
     width: 96%;
 }
 
+#articleList {
+    display: grid;
+}
+
 #sortText {
     display: inline;
 }
