@@ -21,13 +21,13 @@ function PrintComments(comments){
                 <p class="comment-date"> - `+comment['created_at']+`</p>
             </div>
             <div class="comment-content">
-                <p>`+comment['comment']+`</p>
-            </div>`
+                `+comment['comment']+`
+            </div>
+            <hr>`
         );
     });
     $('.comments-content').append(
-        `<hr>
-        <div class="comment">
+        `<div class="comment">
             <label for="author" class="h4" style="float:left">Author</label>
             <input type="text" id="author" class="form-control" style="max-width:30%">
             <label for="comment-content" class="h4" style="float:left">Your Comment</label>

@@ -227,7 +227,6 @@ li {
 .comment-content {
     padding: 20px;
     margin-top: 1%;
-    white-space: pre-wrap;
 }
 
 .comment-content>img,
