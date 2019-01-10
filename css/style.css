@@ -94,7 +94,7 @@ li {
     background-color: #fff;
     padding-bottom: 2%;
     max-width: 100%;
-    width: 94%;
+    width: 98%;
     margin: 1%;
     cursor: pointer;
 }
@@ -103,6 +103,10 @@ li {
     margin: 0;
     padding: 20px 0 10px 0;
     font-weight: 600;
+}
+
+#content {
+    height: 200px;
 }
 
 
