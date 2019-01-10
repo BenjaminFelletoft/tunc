@@ -2,6 +2,7 @@
 <html>
     <script>
         var article_id = "<?php echo $_GET['article_id']; ?>";
+        var poll_id;
     </script>
     <?php require('layout.php'); ?>
     <body>
