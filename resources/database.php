@@ -45,6 +45,28 @@
 		case 'PollVote':
 			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));
 		break;
+		case 'GetComments':
+			$article_id = $_POST['article_id'];
+			$poll_id = $_POST['poll_id'];
+			if(isset($article_id)){
+				$data = Database::select("SELECT * FROM comments WHERE article_id = ?", array($article_id));
+			}else if(isset($poll_id)){
+				$data = Database::select("SELECT * FROM comments WHERE poll_id = ?", array($poll_id));
+			}
+			echo json_encode($data);
+		break;
+		case 'CreateComment':
+			$article_id = $_POST['article_id'];
+			$poll_id = $_POST['poll_id'];
+			$comment = $_POST['comment'];
+			$author = $_POST['author'];
+			if(isset($poll_id)){
+				$data = Database::select("INSERT INTO comments (comment, poll_id, author) VALUES (?,?,?)", array($comment, $id, $author));
+			}else if(isset($article_id)){
+				$data = Database::select("SELECT * FROM comments WHERE article_id = ?", array($id));
+			}
+			echo json_encode($data);
+		break;
 	}
 
 	class Database {
