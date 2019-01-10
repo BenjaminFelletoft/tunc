@@ -33,6 +33,7 @@
             <div class="form-group">
                 <button id="add-option" class="btn btn-primary">Add Option</button>
                 <button id="save" class="btn btn-primary">Save</button>
+                <button id="delete" class="btn btn-danger">Delete</button>
             </div>
         </div>
     </div>

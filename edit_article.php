@@ -28,6 +28,7 @@
                 <textarea id="content" name="content" class="form-control"></textarea>
             </div>
             <button id="save" class="btn btn-primary">Save</button>
+            <button id="delete" class="btn btn-danger">Delete</button>
         </div>
     </div>
 </body>

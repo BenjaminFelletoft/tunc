@@ -2,6 +2,7 @@
 <html>
     <script>
         var poll_id = "<?php echo $_GET['poll_id']; ?>";
+        var article_id;
     </script>
     <?php require('layout.php') ?>
     <body>
@@ -15,6 +16,7 @@
             <div class="module-content">
             </div>
         </div>
+        <?php require('comments.php'); ?>
     </body>
     <script src="js/poll.js"></script>
 </html>

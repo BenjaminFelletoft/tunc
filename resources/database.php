@@ -26,7 +26,13 @@
 		case 'GetAllArticles':
 			$data = Database::select("SELECT * FROM articles", array());
 			echo json_encode($data);
-		break;
+        break;
+        case 'GetAllPolls':
+            $data = Database::select("SELECT * FROM poll", array());
+            //$pollIds = array_column($polls, "id");
+            //$pollOptions = Database::select("SELECT * FROM polloptions WHERE poll_id IN (" + implode(", ", $pollIds) + ")");
+            echo json_encode($data);
+        break;
 		case 'EditArticle':
 			$data = Database::update("UPDATE articles SET title=?, author=?, article=? WHERE id=?", array($_POST['title'], $_POST['name'], $_POST['content'], $_POST['id']));
 			echo json_encode($data);
@@ -44,6 +50,43 @@
 		break;
 		case 'PollVote':
 			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));
+		break;
+		case 'GetComments':
+			$poll_id;
+			$article_id;
+			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] :false;
+			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']:false;
+			$data = null;
+			if(isset($article_id)){
+				$data = Database::select("SELECT * FROM comments WHERE article_id = ?", array($article_id));
+			}else if(isset($poll_id)){
+				$data = Database::select("SELECT * FROM comments WHERE poll_id = ?", array($poll_id));
+			}
+			echo json_encode($data);
+		break;
+		case 'CreateComment':
+			$poll_id;
+			$article_id;
+			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] : false;
+			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']: false;
+			$comment = $_POST['comment'];
+			$author = $_POST['author'];
+			$data = null;
+			if(isset($poll_id)){
+				$data = Database::insert("INSERT INTO comments (comment, poll_id, author) VALUES (?,?,?)", array($comment, $poll_id, $author));
+			}else if(isset($article_id)){
+				$data = Database::insert("INSERT INTO comments (comment, article_id, author) VALUES (?,?,?)", array($comment, $article_id, $author));
+			}
+			echo json_encode($data);
+		break;
+		case 'DeleteArticle':
+			$data = Database::update("DELETE FROM articles WHERE id = ?", array($_POST['id']));
+			echo json_encode($data);
+		break;
+		case 'DeletePoll':
+			Database::update("DELETE FROM polloptions WHERE poll_id = ?", array($_POST['id']));
+			$data = Database::update("DELETE FROM poll WHERE id = ?", array($_POST['id']));
+			echo json_encode($data);
 		break;
 	}
 
