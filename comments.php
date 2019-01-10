@@ -5,7 +5,7 @@
             <div class="module-header">
                 <h1 class="module-title">Comments</h1>
             </div>
-            <div class="module-content">
+            <div class="comments-content">
             </div>
         </div>
     </body>
