@@ -25,8 +25,8 @@ function PrintComments(comments){
     });
 }
 
-$(document).on('click','#save',function(e) {
-
+function SaveComment(){
+    console.log("test");
     $.ajax({
         data: {action:'CreateComment', author:"John Doe", comment:"Interesting.", article_id:article_id, poll_id:poll_id},
         type: "POST",
@@ -39,4 +39,4 @@ $(document).on('click','#save',function(e) {
             console.log(data);
         }
     });
-});
+}
