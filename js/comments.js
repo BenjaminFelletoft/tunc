@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    
+
     $.ajax({
         url:'resources/database.php',
-        data:{action:'GetComments', id:[article_id, poll_id]},
+        data:{action:'GetComments', article_id:article_id, poll_id:poll_id},
         type:'POST',
         dataType:'json',
         success:PrintComments,
