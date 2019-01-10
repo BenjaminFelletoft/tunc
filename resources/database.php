@@ -46,8 +46,10 @@
 			Database::update("UPDATE polloptions SET votes=votes+1 WHERE id = ?", array($_POST['id']));
 		break;
 		case 'GetComments':
-			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] : $article_id;
-			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']: $poll_id;
+			$poll_id;
+			$article_id;
+			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] :false;
+			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']:false;
 			$data = null;
 			if(isset($article_id)){
 				$data = Database::select("SELECT * FROM comments WHERE article_id = ?", array($article_id));
@@ -57,8 +59,10 @@
 			echo json_encode($data);
 		break;
 		case 'CreateComment':
-			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] : $article_id;
-			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']: $poll_id;
+			$poll_id;
+			$article_id;
+			isset($_POST['article_id']) ? $article_id = $_POST['article_id'] : false;
+			isset($_POST['poll_id']) ? $poll_id = $_POST['poll_id']: false;
 			$comment = $_POST['comment'];
 			$author = $_POST['author'];
 			$data = null;
