@@ -40,7 +40,7 @@
 		case 'EditPoll':
 			$data = Database::update("UPDATE poll SET title=?, author=?, description=? WHERE id=?", array($_POST['title'], $_POST['author'], $_POST['description'], $_POST['id']));
 			foreach ($_POST['options'] as $option) {
-				if(strpos($option[0], 'option') !== false){
+				if(strpos($option[0], 'option-') !== false){
 					$data = Database::insert("INSERT INTO polloptions (poll_id, name) VALUES (?, ?)", array($_POST["id"], $option[1]));
 				}
 				else{
@@ -85,7 +85,7 @@
 		break;
 		case 'DeletePoll':
 			Database::update("DELETE FROM polloptions WHERE poll_id = ?", array($_POST['id']));
-			$data = Database::update("DELETE FROM poll WHERE id = ?", array($_POST['id']));
+				$data = Database::update("DELETE FROM poll WHERE id = ?", array($_POST['id']));
 			echo json_encode($data);
 		break;
 	}
