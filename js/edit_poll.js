@@ -84,7 +84,7 @@ $(document).on('click', '#delete', function(e) {
             url: "resources/database.php",
             success: function(data){
                 console.log(data);
-                //document.location.href = "frontpage.php";
+                document.location.href = "frontpage.php";
             },
             error:function(data){
             console.log(data);
