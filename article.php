@@ -3,7 +3,7 @@
     <script>
         var article_id = "<?php echo $_GET['article_id']; ?>";
     </script>
-    <?php require('layout.php') ?>
+    <?php require('layout.php'); ?>
     <body>
         <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
             <div class="module-header">
@@ -15,6 +15,7 @@
             <div class="module-content">
             </div>
         </div>
+        <?php require('comments.php'); ?>
     </body>
     <script src="js/article.js"></script>
 </html>

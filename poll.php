@@ -15,6 +15,7 @@
             <div class="module-content">
             </div>
         </div>
+        <?php require('comments.php'); ?>
     </body>
     <script src="js/poll.js"></script>
 </html>
