@@ -25,10 +25,10 @@ function PrintComments(comments){
     });
 }
 
-function SaveComment(){
+$('#save-comment').click(function(){
     console.log("test");
     $.ajax({
-        data: {action:'CreateComment', author:"John Doe", comment:"Interesting.", article_id:article_id, poll_id:poll_id},
+        data: {action:'CreateComment', author:$('#author').val(), comment:$('#comment-content').val(), article_id:article_id, poll_id:poll_id},
         type: "POST",
         url: "resources/database.php",
         success: function(data){
@@ -39,4 +39,4 @@ function SaveComment(){
             console.log(data);
         }
     });
-}
+});
