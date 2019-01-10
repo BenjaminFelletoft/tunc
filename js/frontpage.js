@@ -9,6 +9,8 @@ $(document).ready(function(){
             console.log(data);
         },
     });
+    
+    
 });
 function searchArticles() {
     var input, filter, ul, li, a, i, txtValue;
@@ -30,7 +32,7 @@ function searchArticles() {
 function PrintArticleLinks(articles){
     var articleCount = articles.length;
     articles.forEach(article => {
-        var articleContainer = $("<li></li>").append(
+        var articleContainer = $("<li></li>").addClass("pagi").append(
             $("<div></div>").addClass("col-lg-8 article").attr("id", article["id"])
             .append($("<h3></h3>").text(article["title"]))
             .append($("<p></p>").addClass("lead").text("by " + article["author"]))
@@ -49,6 +51,7 @@ function PrintArticleLinks(articles){
             window.location.href = "article.php?article_id="+article["id"];
         });
     });
+    $('.pagi').paginate(2);
 }
 function sortArticlesByTitle(){
     var list, c1, c2, article1, article2, i, switching, b, shouldSwitch, dir, switchcount = 0;

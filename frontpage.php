@@ -16,4 +16,5 @@
     </div>
 </body>
 <script src="js/frontpage.js"></script>
+<script src="js/pagination.js"></script>
 </html>
