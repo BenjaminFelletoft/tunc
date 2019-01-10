@@ -26,7 +26,13 @@
 		case 'GetAllArticles':
 			$data = Database::select("SELECT * FROM articles", array());
 			echo json_encode($data);
-		break;
+        break;
+        case 'GetAllPolls':
+            $data = Database::select("SELECT * FROM poll", array());
+            //$pollIds = array_column($polls, "id");
+            //$pollOptions = Database::select("SELECT * FROM polloptions WHERE poll_id IN (" + implode(", ", $pollIds) + ")");
+            echo json_encode($data);
+        break;
 		case 'EditArticle':
 			$data = Database::update("UPDATE articles SET title=?, author=?, article=? WHERE id=?", array($_POST['title'], $_POST['name'], $_POST['content'], $_POST['id']));
 			echo json_encode($data);
