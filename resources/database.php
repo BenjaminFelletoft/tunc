@@ -84,6 +84,7 @@
 			echo json_encode($data);
 		break;
 		case 'DeletePoll':
+			Database::update("DELETE FROM polloptions WHERE poll_id = ?", array($_POST['id']));
 			$data = Database::update("DELETE FROM poll WHERE id = ?", array($_POST['id']));
 			echo json_encode($data);
 		break;
