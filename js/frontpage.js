@@ -29,6 +29,7 @@ $(document).ready(function() {
 
     $.when(articleCall, pollCall).done(function() {
         printPosts(posts);
+        $('.pagi').paginate(5);
     });
 });
 function searchArticles() {
@@ -70,7 +71,7 @@ function generateArticleLinks(articles, postList){
 
 function generatePollLinks(polls, postList) {
     polls.forEach(poll => {
-        var pollContainer = $("<li></li>").append(
+        var pollContainer = $("<li></li>").addClass("pagi").append(
             $("<div></div>").addClass("col-lg-8 article").attr("id", poll["id"])
             .on("click", function() {
                 window.location.href = "poll.php?poll_id="+poll["id"];
@@ -102,8 +103,6 @@ function printPosts(posts) {
 
         return 0;
     });
-    $('.pagi').paginate(2);
-
     $(".module-content").append(posts);
 }
 
