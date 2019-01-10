@@ -15,16 +15,19 @@ $(document).ready(function(){
 function PrintComments(comments){
     comments.forEach(comment => {
         console.log(comment);
-        /*$('.comments-content').append(
-            `
-            `
+        $('.comments-content').append(
+            `<div class="comment-header">
+                <p class="comment-author">`+comment['author']+`</p>
+                <p class="comment-date"> - `+comment['created_at']+`</p>
+            </div>
+            <div class="comment-content">
+                <p>`+comment['comment']+`</p>
+            </div>`
         );
-        $('.comment-author').text(poll[0]['author']);
-        $('.comment-content').text(poll[0]['comment']);
-        $('.comment-date').text(poll[0]['created_at']);*/
     });
     $('.comments-content').append(
-        `<div class="comment">
+        `<hr>
+        <div class="comment">
             <label for="author" class="h4" style="float:left">Author</label>
             <input type="text" id="author" class="form-control" style="max-width:30%">
             <label for="comment-content" class="h4" style="float:left">Your Comment</label>
