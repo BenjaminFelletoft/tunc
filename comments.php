@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<head>
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-</head>
 <html>
-    <?php require('layout.php'); ?>
     <body>
         <div class="module-container col-lg-8 col-lg-offset-2 jumbotron">
             <div class="module-header">
