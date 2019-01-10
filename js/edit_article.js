@@ -31,3 +31,18 @@ $(document).on('click','#save',function(e) {
         }
   });
 });
+
+$(document).on('click', '#delete', function(e) {
+    $.ajax({
+            data: {action:'DeleteArticle', id:article_id},
+            type: "POST",
+            url: "resources/database.php",
+            success: function(data){
+                console.log(data);
+                document.location.href = "frontpage.php";
+            },
+            error:function(data){
+            console.log(data);
+        }
+    });
+})

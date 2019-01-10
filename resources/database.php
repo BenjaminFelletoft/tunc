@@ -73,6 +73,14 @@
 			}
 			echo json_encode($data);
 		break;
+		case 'DeleteArticle':
+			$data = Database::update("DELETE FROM articles WHERE id = ?", array($_POST['id']));
+			echo json_encode($data);
+		break;
+		case 'DeletePoll':
+			$data = Database::update("DELETE FROM poll WHERE id = ?", array($_POST['id']));
+			echo json_encode($data);
+		break;
 	}
 
 	class Database {

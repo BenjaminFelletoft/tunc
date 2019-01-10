@@ -54,6 +54,13 @@ li {
     top: 1%;
     right: 1%;
 }
+
+.btn-group {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
 .module-title{
     border-bottom: solid #4F517D 1px;
     margin-bottom: 1%;
